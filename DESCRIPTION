@@ -2,8 +2,9 @@ Package: usaceki
 Title: USACE Knowledge Infrastructure
 Version: 2025.11.12
 Authors@R: c(
-    person("Michael", "Dougherty", , "Michael.P.Dougherty@usace.army.mil", 
-           role = "aut",
+    person(c("Michael", "Patrick"), "Dougherty", 
+           email="Michael.P.Dougherty@usace.army.mil", 
+           role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1465-5927"))
   )
 Description: This R package contains a set of tools for documenting and deriving ontologies from existing USACE data systems. 
@@ -12,8 +13,13 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 URL: https://mvr-gis.github.io/usaceki/
-Suggests: 
-    testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Suggests: 
+    keyring,
+    testthat (>= 3.0.0)
 Imports: 
-    dplyr
+    DBI,
+    dplyr,
+    rdflib,
+    ROracle,
+    stringr
