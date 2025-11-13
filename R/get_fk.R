@@ -6,7 +6,7 @@
 #' @importFrom ROracle dbGetQuery
 get_fk <- function(db_connection) {
   fk_info <- dbGetQuery(
-    con_roracle,
+    db_connection,
     "
     SELECT a.table_name AS child_table,
            a.column_name AS fk_column,

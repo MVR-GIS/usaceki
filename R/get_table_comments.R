@@ -6,7 +6,7 @@
 #' @importFrom ROracle dbGetQuery
 get_table_comments <- function(db_connection) {
   tab_comments <- dbGetQuery(
-    con_roracle,
+    db_connection,
     "
     SELECT table_name, comments
     FROM user_tab_comments

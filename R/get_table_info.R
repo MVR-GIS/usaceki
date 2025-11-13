@@ -10,12 +10,12 @@
 get_table_info <- function(dbconnection, table_vector) {
   table_info <- lapply(table_vector, function(tbl) {
     dbGetQuery(
-      con_roracle,
+      db_connection,
       paste0(
         "
-      SELECT column_name, data_type, nullable 
-      FROM user_tab_columns 
-      WHERE table_name = '",
+        SELECT column_name, data_type, nullable 
+        FROM user_tab_columns 
+        WHERE table_name = '",
         tbl,
         "'"
       )
