@@ -1,0 +1,17 @@
+---
+title: "Identify Missing Metadata"
+---
+
+## Problem
+Don't you hate it when you're asked to work on a database project and after you say "Sure, no problem. Where's the documentation?" you get this blank look? If so, then this article will help demonstrate how to use this package to document and existing database. We'll start by connecting to the database and document its existing schema. Then we'll identify missing metadata that should probably be added to improve the project documentation. 
+
+```{r import-labraries}
+library(usaceki)
+library(keyring)
+library(DBI)
+library(ROracle)
+library(dplyr)
+library(stringr)
+```
+
+
