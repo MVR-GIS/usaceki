@@ -1,10 +1,8 @@
 #' @title Get Column Comments
 #' @description Get column comments.
 #' @param db_connection    DBI::dbconnect object; A database connection.
-#' @returns
-#'
+#' @returns A data frame of column comments.
 #' @export
-#' @examples
 get_column_comments <- function(db_connection) {
   col_comments <- dbGetQuery(
     db_connection,

@@ -9,6 +9,9 @@ get_column_comments(db_connection)
 \arguments{
 \item{db_connection}{DBI::dbconnect object; A database connection.}
 }
+\value{
+A data frame of column comments.
+}
 \description{
 Get column comments.
 }
