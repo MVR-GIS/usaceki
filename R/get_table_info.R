@@ -7,7 +7,7 @@
 #'          each table).
 #' @export
 #' @importFrom ROracle dbGetQuery
-get_table_info <- function(dbconnection, table_vector) {
+get_table_info <- function(db_connection, table_vector) {
   table_info <- lapply(table_vector, function(tbl) {
     dbGetQuery(
       db_connection,

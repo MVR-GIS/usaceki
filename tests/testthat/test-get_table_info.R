@@ -1,5 +1,5 @@
 test_that("get table info", {
-  db_connection = con_roracle
+  db_connection <- con_roracle
   table_vector <- get_tables(db_connection)
   table_info <- get_table_info(db_connection, table_vector)
   expect_true(is.list(table_info))

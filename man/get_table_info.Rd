@@ -4,13 +4,13 @@
 \alias{get_table_info}
 \title{Get Table Info}
 \usage{
-get_table_info(dbconnection, table_vector)
+get_table_info(db_connection, table_vector)
 }
 \arguments{
+\item{db_connection}{DBI::dbconnect object; A database connection.}
+
 \item{table_vector}{character; A character vector of table names as
 returned by the get_tables function.}
-
-\item{db_connection}{DBI::dbconnect object; A database connection.}
 }
 \value{
 A list of tables containing a data frame of columns names(for
