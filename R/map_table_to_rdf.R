@@ -2,6 +2,12 @@
 #' @description Adds RDF triples to an existing RDF triplestore of table
 #'   definitions.
 #' @param graph            rdf object; An rdflib rdf object.
+#' @param namespace        named character vector; A "namespace" or RDF
+#'                         vocabulary is a collection of namespace
+#'                         Internationalized Resource Identifiers (IRI)
+#'                         used to construct URIs. Must be specified as a
+#'                         named vector of the form:
+#'                         namespace prefix = namespace IRI
 #' @param table_name       character; A named character vector of table names.
 #' @param cols_df          data.frame;
 #' @param pk_df            data.frame;
@@ -9,25 +15,27 @@
 #' @param col_comments_df  data.frame;
 #' @returns An rdf graph object.
 #' @export
+#' @importFrom rdflib rdf_add
 map_table_to_rdf <- function(
   graph,
+  namespace,
   table_name,
   cols_df,
   pk_df,
   tab_comments_df,
   col_comments_df
 ) {
-  class_uri <- paste0(ns["ex"], table_name)
+  class_uri <- paste0(namespace["ex"], table_name)
   rdf_add(
     graph,
     class_uri,
-    paste0(ns["rdf"], "type"),
-    paste0(ns["owl"], "Class")
+    paste0(namespace["rdf"], "type"),
+    paste0(namespace["owl"], "Class")
   )
   rdf_add(
     graph,
     class_uri,
-    paste0(ns["rdfs"], "label"),
+    paste0(namespace["rdfs"], "label"),
     table_name,
     objectType = "literal"
   )
@@ -40,7 +48,7 @@ map_table_to_rdf <- function(
     rdf_add(
       graph,
       class_uri,
-      paste0(ns["rdfs"], "comment"),
+      paste0(namespace["rdfs"], "comment"),
       t_comment,
       objectType = "literal"
     )
@@ -54,31 +62,31 @@ map_table_to_rdf <- function(
     col <- cols_df$COLUMN_NAME[i]
     col_type <- toupper(cols_df$DATA_TYPE[i])
     nullable <- cols_df$NULLABLE[i]
-    prop_uri <- paste0(ns["ex"], table_name, "/", col)
+    prop_uri <- paste0(namespace["ex"], table_name, "/", col)
 
     rdf_add(
       graph,
       prop_uri,
-      paste0(ns["rdf"], "type"),
-      paste0(ns["owl"], "DatatypeProperty")
+      paste0(namespace["rdf"], "type"),
+      paste0(namespace["owl"], "DatatypeProperty")
     )
-    rdf_add(graph, prop_uri, paste0(ns["rdfs"], "domain"), class_uri)
+    rdf_add(graph, prop_uri, paste0(namespace["rdfs"], "domain"), class_uri)
 
     range_uri <- if (grepl("CHAR|CLOB|VARCHAR|NVARCHAR", col_type)) {
-      paste0(ns["xsd"], "string")
+      paste0(namespace["xsd"], "string")
     } else if (grepl("NUMBER|DECIMAL|INT", col_type)) {
-      paste0(ns["xsd"], "decimal")
+      paste0(namespace["xsd"], "decimal")
     } else if (grepl("DATE|TIMESTAMP", col_type)) {
-      paste0(ns["xsd"], "dateTime")
+      paste0(namespace["xsd"], "dateTime")
     } else {
-      paste0(ns["xsd"], "string")
+      paste0(namespace["xsd"], "string")
     }
 
-    rdf_add(graph, prop_uri, paste0(ns["rdfs"], "range"), range_uri)
+    rdf_add(graph, prop_uri, paste0(namespace["rdfs"], "range"), range_uri)
     rdf_add(
       graph,
       prop_uri,
-      paste0(ns["rdfs"], "label"),
+      paste0(namespace["rdfs"], "label"),
       col,
       objectType = "literal"
     )
@@ -92,7 +100,7 @@ map_table_to_rdf <- function(
       rdf_add(
         graph,
         prop_uri,
-        paste0(ns["skos"], "definition"),
+        paste0(namespace["skos"], "definition"),
         c_comment,
         objectType = "literal"
       )
@@ -103,13 +111,13 @@ map_table_to_rdf <- function(
       rdf_add(
         graph,
         prop_uri,
-        paste0(ns["rdf"], "type"),
-        paste0(ns["owl"], "FunctionalProperty")
+        paste0(namespace["rdf"], "type"),
+        paste0(namespace["owl"], "FunctionalProperty")
       )
       rdf_add(
         graph,
         prop_uri,
-        paste0(ns["rdfs"], "comment"),
+        paste0(namespace["rdfs"], "comment"),
         paste0("Primary key for table ", table_name),
         objectType = "literal"
       )
@@ -120,7 +128,7 @@ map_table_to_rdf <- function(
       rdf_add(
         graph,
         prop_uri,
-        paste0(ns["rdfs"], "comment"),
+        paste0(namespace["rdfs"], "comment"),
         "NOT NULL column",
         objectType = "literal"
       )

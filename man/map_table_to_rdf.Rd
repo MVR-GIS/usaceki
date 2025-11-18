@@ -6,6 +6,7 @@
 \usage{
 map_table_to_rdf(
   graph,
+  namespace,
   table_name,
   cols_df,
   pk_df,
@@ -15,6 +16,13 @@ map_table_to_rdf(
 }
 \arguments{
 \item{graph}{rdf object; An rdflib rdf object.}
+
+\item{namespace}{named character vector; A "namespace" or RDF
+vocabulary is a collection of namespace
+Internationalized Resource Identifiers (IRI)
+used to construct URIs. Must be specified as a
+named vector of the form:
+namespace prefix = namespace IRI}
 
 \item{table_name}{character; A named character vector of table names.}
 
