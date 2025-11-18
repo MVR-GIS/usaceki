@@ -3,7 +3,7 @@ title: "Identify Missing Metadata"
 ---
 
 ## Problem
-Don't you hate it when you're asked to work on a database project and after you say "Sure, no problem. Where's the documentation?" you get this blank look? If so, then this article will help demonstrate how to use this package to document and existing database. We'll start by connecting to the database and document its existing schema. Then we'll identify missing metadata that should probably be added to improve the project documentation. 
+Don't you hate it when you're asked to work on a database project and after you say "Sure, no problem. Where's the documentation?" and you get this blank look? If so, this article helps demonstrate how to use this package to document an existing database. We'll start by connecting to the database and document its existing schema. Then we'll identify missing metadata that should probably be added to improve the project documentation. 
 
 ```{r import-labraries}
 library(usaceki)
@@ -12,6 +12,74 @@ library(DBI)
 library(ROracle)
 library(dplyr)
 library(stringr)
+library(rdflib)
+```
+
+## EQRI
+The USACE Engineering Quality Risk Indicator (EQRI) application allows staff to record and track engineering quality indicators for reporting and analysis. 
+
+## Extract RDMS Schema Metadata
+
+```{r}
+# Connect to Database
+qri_connection <- get_qri_connection(set_key = FALSE)
+
+# Get list of tables
+tables <- get_tables(qri_connection)
+
+# Get a list of tables with df of column metadata
+table_info <- get_table_info(qri_connection, tables)
+
+# Get primary keys
+pk_info <- get_pk(qri_connection)
+
+# Get foreign keys
+fk_info <- get_fk(qri_connection)
+
+# Get table comments
+table_comments <- get_table_comments(qri_connection)
+
+# Get column comments
+column_comments <- get_column_comments(qri_connection)
 ```
 
 
+## Map RDMS Schema to RDF
+```{r}
+# Create an empty RDF graph
+g <- rdf()
+
+# Define namespace bindings (used at serialization time)
+ns <- c(
+  ex = "http://usace.gov/rf-dm#",
+  owl = "http://www.w3.org/2002/07/owl#",
+  rdfs = "http://www.w3.org/2000/01/rdf-schema#",
+  rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  xsd = "http://www.w3.org/2001/XMLSchema#",
+  skos = "http://www.w3.org/2004/02/skos/core#"
+)
+
+# Map all tables (table_info is a named list where names are table names)
+for (tbl in names(table_info)) {
+  g <- map_table_to_rdf(
+    g,
+    tbl,
+    table_info[[tbl]],
+    pk_info,
+    tab_comments,
+    col_comments
+  )
+}
+
+# Map foreign keys (assuming fk_info is available)
+g <- map_foreign_keys_to_rdf(g, fk_info)
+```
+
+
+```{r map-tables}
+
+```
+
+```{r}
+
+```
