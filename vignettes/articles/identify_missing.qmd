@@ -47,11 +47,11 @@ column_comments <- get_column_comments(qri_connection)
 ## Map RDMS Schema to RDF
 ```{r}
 # Create an empty RDF graph
-g <- rdf()
+rdf_graph <- rdf()
 
 # Define namespace bindings (used at serialization time)
 ns <- c(
-  ex = "http://usace.gov/rf-dm#",
+  ex = "http://usace.gov/qri-dm#",
   owl = "http://www.w3.org/2002/07/owl#",
   rdfs = "http://www.w3.org/2000/01/rdf-schema#",
   rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -59,27 +59,47 @@ ns <- c(
   skos = "http://www.w3.org/2004/02/skos/core#"
 )
 
-# Map all tables (table_info is a named list where names are table names)
+# Map tables to RDF
 for (tbl in names(table_info)) {
-  g <- map_table_to_rdf(
-    g,
+  rdf_graph <- map_table_to_rdf(
+    rdf_graph,
+    ns,
     tbl,
     table_info[[tbl]],
     pk_info,
-    tab_comments,
-    col_comments
+    table_comments,
+    column_comments
   )
 }
 
-# Map foreign keys (assuming fk_info is available)
-g <- map_foreign_keys_to_rdf(g, fk_info)
+# Map foreign keys to RDF
+rdf_graph <- map_fks_to_rdf(
+  graph = rdf_graph,
+  namespace = ns,
+  fk_df = fk_info
+)
 ```
 
-
-```{r map-tables}
-
+## Serialize to Turtle
+```{r}
+# Write TTL with prefixes (the `namespace` parameter binds prefixes in the output)
+rdflib::rdf_serialize(
+  rdf_graph,
+  "inst/extdata/qri-dm.ttl",
+  format = "turtle",
+  namespace = ns
+)
 ```
+
+## Vizualize Schema Metadata
 
 ```{r}
 
+```
+
+
+
+## Disconnect from Database
+```{r db-disconnect}
+ROracle::dbDisconnect(con_roracle)
 ```

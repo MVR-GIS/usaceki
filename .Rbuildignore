@@ -11,3 +11,4 @@
 ^vignettes/articles/\.quarto$
 ^vignettes/articles/*_files$
 ^dev$
+^data-raw$
