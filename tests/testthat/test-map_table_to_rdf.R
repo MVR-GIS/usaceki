@@ -17,13 +17,13 @@ test_that("map_table_to_rdf", {
   )
   for (tbl in names(table_info)) {
     g <- map_table_to_rdf(
-      rdf_graph,
-      namespace,
-      tbl,
-      table_info[[tbl]],
-      pk_info,
-      table_comments,
-      column_comments
+      graph = rdf_graph,
+      namespace = namespace,
+      table_name = tbl,
+      cols_df = table_info[[tbl]],
+      pk_df = pk_info,
+      tab_comments_df = table_comments,
+      col_comments_df = column_comments
     )
   }
   expect_in(class(g), "rdf")

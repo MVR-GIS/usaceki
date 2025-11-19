@@ -26,16 +26,19 @@ namespace prefix = namespace IRI}
 
 \item{table_name}{character; A named character vector of table names.}
 
-\item{cols_df}{data.frame;}
+\item{cols_df}{data.frame; A df of column characteristics returned
+by the get_table_info function.}
 
-\item{pk_df}{data.frame;}
+\item{pk_df}{data.frame; A df returned from the get_pk function.}
 
-\item{tab_comments_df}{data.frame;}
+\item{tab_comments_df}{data.frame; A df returned by the get_table_comments
+function.}
 
-\item{col_comments_df}{data.frame;}
+\item{col_comments_df}{data.frame; A df returned from the get_column_comments
+function.}
 }
 \value{
-An rdf graph object.
+An rdflib::rdf graph object.
 }
 \description{
 Adds RDF triples to an existing RDF triplestore of table

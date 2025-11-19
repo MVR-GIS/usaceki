@@ -9,11 +9,14 @@
 #'                         named vector of the form:
 #'                         namespace prefix = namespace IRI
 #' @param table_name       character; A named character vector of table names.
-#' @param cols_df          data.frame;
-#' @param pk_df            data.frame;
-#' @param tab_comments_df  data.frame;
-#' @param col_comments_df  data.frame;
-#' @returns An rdf graph object.
+#' @param cols_df          data.frame; A df of column characteristics returned
+#'                         by the get_table_info function.
+#' @param pk_df            data.frame; A df returned from the get_pk function.
+#' @param tab_comments_df  data.frame; A df returned by the get_table_comments
+#'                         function.
+#' @param col_comments_df  data.frame; A df returned from the get_column_comments
+#'                         function.
+#' @returns An rdflib::rdf graph object.
 #' @export
 #' @importFrom rdflib rdf_add
 map_table_to_rdf <- function(
