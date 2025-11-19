@@ -8,11 +8,16 @@ Description: This R package contains a set of tools for documenting and
     deriving ontologies from existing USACE data systems.
 License: CC0
 URL: https://mvr-gis.github.io/usaceki/
+Depends: 
+    R (>= 3.5)
 Imports: 
     assertthat,
+    attachment,
     DBI,
+    devtools,
     httr,
     keyring,
+    rdflib,
     rlang,
     ROracle,
     stringr
@@ -24,5 +29,6 @@ Suggests:
 Config/Needs/website: quarto
 Config/testthat/edition: 3
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3

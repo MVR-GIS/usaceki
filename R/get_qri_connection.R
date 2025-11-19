@@ -5,7 +5,7 @@
 #'                 keyring::key_set function to create the key_service on this
 #'                 computer? If FALSE, uses the password store on the
 #'                 computer.
-#' @returns An OraConnection oject whose class extends DBIConnection. This
+#' @returns An OraConnection object whose class extends DBIConnection. This
 #'   object is used to execute SQL queries on the USACE QRI database.
 #' @importFrom keyring key_set key_get
 #' @importFrom DBI dbDriver

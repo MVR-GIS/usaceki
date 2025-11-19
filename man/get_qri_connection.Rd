@@ -13,7 +13,7 @@ computer? If FALSE, uses the password store on the
 computer.}
 }
 \value{
-An OraConnection oject whose class extends DBIConnection. This
+An OraConnection object whose class extends DBIConnection. This
 object is used to execute SQL queries on the USACE QRI database.
 }
 \description{
