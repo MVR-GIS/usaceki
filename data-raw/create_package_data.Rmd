@@ -1,0 +1,96 @@
+# Create Package Data
+```{r import-labraries}
+library(usaceki)
+library(keyring)
+library(DBI)
+library(ROracle)
+library(dplyr)
+library(stringr)
+library(rdflib)
+```
+
+
+## EQRI
+The USACE Engineering Quality Risk Indicator (EQRI) application allows staff to record and track engineering quality indicators for reporting and analysis. For more details see: [](https://usace.dps.mil/sites/KMP-EC/SitePages/QRI.aspx)
+
+
+## Extract RDMS Schema Metadata
+```{r}
+# Connect to Database
+qri_connection <- get_qri_connection(set_key = FALSE)
+
+# Get list of tables
+tables <- get_tables(qri_connection)
+
+# Get a list of tables with df of column metadata
+table_info <- get_table_info(qri_connection, tables)
+
+# Get primary keys
+pk_info <- get_pk(qri_connection)
+
+# Get foreign keys
+fk_info <- get_fk(qri_connection)
+
+# Get table comments
+table_comments <- get_table_comments(qri_connection)
+
+# Get column comments
+column_comments <- get_column_comments(qri_connection)
+```
+
+
+## Map RDMS Schema to RDF
+```{r}
+# Create an empty RDF graph
+rdf_graph <- rdf()
+
+# Define namespace bindings (used at serialization time)
+ns <- c(
+  ex = "http://usace.gov/qri-dm#",
+  owl = "http://www.w3.org/2002/07/owl#",
+  rdfs = "http://www.w3.org/2000/01/rdf-schema#",
+  rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  xsd = "http://www.w3.org/2001/XMLSchema#",
+  skos = "http://www.w3.org/2004/02/skos/core#"
+)
+
+# Map tables to RDF
+for (tbl in names(table_info)) {
+  rdf_graph <- map_table_to_rdf(
+    rdf_graph,
+    ns,
+    tbl,
+    table_info[[tbl]],
+    pk_info,
+    table_comments,
+    column_comments
+  )
+}
+
+# Map foreign keys to RDF
+rdf_graph <- map_fks_to_rdf(
+  graph = rdf_graph,
+  namespace = ns,
+  fk_df = fk_info
+)
+```
+
+
+## Serialize to Turtle
+```{r}
+# Write TTL with prefixes (the `namespace` parameter binds prefixes in the output)
+rdflib::rdf_serialize(
+  rdf_graph,
+  "inst/extdata/qri-dm.ttl",
+  format = "turtle",
+  namespace = ns
+)
+```
+
+
+## Save package data
+```{r}
+qri_rdf_graph <- rdf_graph
+usethis::use_data(qri_rdf_graph, overwrite = TRUE)
+```
+
