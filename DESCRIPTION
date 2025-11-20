@@ -1,6 +1,6 @@
 Package: usaceki
 Title: USACE Knowledge Infrastructure
-Version: 2025.11.17
+Version: 2025.11.20
 Authors@R: 
     person(c("Michael", "Patrick"), "Dougherty", , "Michael.P.Dougherty@usace.army.mil", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1465-5927"))
@@ -15,6 +15,7 @@ Imports:
     attachment,
     DBI,
     devtools,
+    dplyr,
     httr,
     keyring,
     rdflib,
@@ -22,7 +23,6 @@ Imports:
     ROracle,
     stringr
 Suggests: 
-    dplyr,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
