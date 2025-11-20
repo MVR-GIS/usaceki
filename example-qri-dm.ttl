@@ -1,0 +1,1923 @@
+@base <localhost://> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://usace.gov/qri-dm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:COMMENTS
+    a owl:Class ;
+    rdfs:label "COMMENTS" .
+
+<http://usace.gov/qri-dm#COMMENTS/COMMENTS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "COMMENTS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#COMMENTS/COMMENT_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "COMMENT_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#COMMENTS/COMMENT_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "COMMENT_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#COMMENTS/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#COMMENTS/QUESTIONNAIREEVENT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "QUESTIONNAIREEVENT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#COMMENTS/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#COMMENTS/RESPONSE_UID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "RESPONSE_UID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#COMMENTS/UPDATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "UPDATED_BY" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#COMMENTS/UPDATE_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:COMMENTS ;
+    rdfs:label "UPDATE_DATE" ;
+    rdfs:range xsd:dateTime .
+
+ex:DESIGNSTRATEGY
+    a owl:Class ;
+    rdfs:label "DESIGNSTRATEGY" .
+
+<http://usace.gov/qri-dm#DESIGNSTRATEGY/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:DESIGNSTRATEGY ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#DESIGNSTRATEGY/DESIGNSTRATEGY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:DESIGNSTRATEGY ;
+    rdfs:label "DESIGNSTRATEGY" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#DESIGNSTRATEGY/DESIGNSTRATEGY_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table DESIGNSTRATEGY" ;
+    rdfs:domain ex:DESIGNSTRATEGY ;
+    rdfs:label "DESIGNSTRATEGY_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:DESIGN_TEAM
+    a owl:Class ;
+    rdfs:label "DESIGN_TEAM" .
+
+<http://usace.gov/qri-dm#DESIGN_TEAM/DESIGNTEAM_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table DESIGN_TEAM" ;
+    rdfs:domain ex:DESIGN_TEAM ;
+    rdfs:label "DESIGNTEAM_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#DESIGN_TEAM/DESIGN_TEAM>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:DESIGN_TEAM ;
+    rdfs:label "DESIGN_TEAM" ;
+    rdfs:range xsd:string .
+
+ex:EDW_P2_CC_OVR_40
+    a owl:Class ;
+    rdfs:label "EDW_P2_CC_OVR_40" .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/AT_COMPLETION_COST>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "AT_COMPLETION_COST" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/INITIATION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "INITIATION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/M100>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "M100" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/M35>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "M35" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/M65>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "M65" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/M95>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "M95" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/NOTES>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "NOTES" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_DISTRICT>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_DISTRICT" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_DIVISION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_DIVISION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_NUMBER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_NUMBER" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_NUMBER_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_NUMBER_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/PROJECT_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "PROJECT_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/RESOURCE_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "RESOURCE_END_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/RESOURCE_SHORT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "RESOURCE_SHORT_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/RESOURCE_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "RESOURCE_START_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/TASK_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "TASK_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_P2_CC_OVR_40/TASK_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_P2_CC_OVR_40 ;
+    rdfs:label "TASK_NAME" ;
+    rdfs:range xsd:string .
+
+ex:EDW_PP_PROJWBS_TREE_VW
+    a owl:Class ;
+    rdfs:label "EDW_PP_PROJWBS_TREE_VW" .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ACTIVITY_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ACTIVITY_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ACTIVITY_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ACTIVITY_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ACTIVITY_WBS_PATH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ACTIVITY_WBS_PATH" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ACTVCODETYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ACTVCODETYPE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ACTV_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ACTV_CODE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/MILITARY_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "MILITARY_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/MS_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "MS_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/MS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "MS_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/MS_SEQ_NUM>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "MS_SEQ_NUM" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/MS_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "MS_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "NAME" ;
+    rdfs:range xsd:string ;
+    skos:definition "PROJ_NAME" .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PARENT_WBS_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PARENT_WBS_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_FOA>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_FOA" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_NO>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_NO" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_OWNING_ORG>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_OWNING_ORG" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/PROJ_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "PROJ_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/ROW_DEPTH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "ROW_DEPTH" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_ACT_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_ACT_END_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_ACT_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_ACT_START_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_TARGET_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_TARGET_END_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/TASK_TARGET_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "TASK_TARGET_START_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/WBS_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "WBS_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW/WBS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW ;
+    rdfs:label "WBS_NAME" ;
+    rdfs:range xsd:string .
+
+ex:EDW_PP_PROJWBS_TREE_VW_CC800
+    a owl:Class ;
+    rdfs:label "EDW_PP_PROJWBS_TREE_VW_CC800" .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/ACTIVITY_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "ACTIVITY_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/MILITARY_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "MILITARY_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/MS_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "MS_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/MS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "MS_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/MS_SEQ_NUM>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "MS_SEQ_NUM" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/MS_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "MS_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/P2_NUMBER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "P2_NUMBER" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/PROJ_FOA>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "PROJ_FOA" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/PROJ_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "PROJ_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/PROJ_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "PROJ_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/PROJ_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "PROJ_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/ROW_DEPTH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "ROW_DEPTH" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_ACT_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_ACT_END_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_ACT_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_ACT_START_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_TARGET_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_TARGET_END_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/TASK_TARGET_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "TASK_TARGET_START_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#EDW_PP_PROJWBS_TREE_VW_CC800/WBS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:EDW_PP_PROJWBS_TREE_VW_CC800 ;
+    rdfs:label "WBS_NAME" ;
+    rdfs:range xsd:string .
+
+ex:HTMLDB_PLAN_TABLE
+    a owl:Class ;
+    rdfs:label "HTMLDB_PLAN_TABLE" .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/ACCESS_PREDICATES>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "ACCESS_PREDICATES" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/BYTES>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "BYTES" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/CARDINALITY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "CARDINALITY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/COST>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "COST" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/CPU_COST>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "CPU_COST" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/DEPTH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "DEPTH" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/DISTRIBUTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "DISTRIBUTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/FILTER_PREDICATES>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "FILTER_PREDICATES" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/IO_COST>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "IO_COST" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_ALIAS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_ALIAS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_INSTANCE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_INSTANCE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_NODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_NODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_OWNER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_OWNER" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OBJECT_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OBJECT_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OPERATION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OPERATION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OPTIMIZER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OPTIMIZER" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OPTIONS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OPTIONS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OTHER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OTHER" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/OTHER_TAG>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "OTHER_TAG" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PARENT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PARENT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PARTITION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PARTITION_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PARTITION_START>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PARTITION_START" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PARTITION_STOP>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PARTITION_STOP" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PLAN_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PLAN_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/POSITION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "POSITION" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/PROJECTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "PROJECTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/QBLOCK_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "QBLOCK_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/REMARKS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "REMARKS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/SEARCH_COLUMNS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "SEARCH_COLUMNS" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/STATEMENT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "STATEMENT_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/TEMP_SPACE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "TEMP_SPACE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/TIME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "TIME" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#HTMLDB_PLAN_TABLE/TIMESTAMP>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:HTMLDB_PLAN_TABLE ;
+    rdfs:label "TIMESTAMP" ;
+    rdfs:range xsd:dateTime .
+
+ex:INDICATOR
+    a owl:Class ;
+    rdfs:label "INDICATOR" .
+
+<http://usace.gov/qri-dm#INDICATOR/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:INDICATOR ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#INDICATOR/INDICATOR>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:INDICATOR ;
+    rdfs:label "INDICATOR" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#INDICATOR/INDICATOR_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table INDICATOR" ;
+    rdfs:domain ex:INDICATOR ;
+    rdfs:label "INDICATOR_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:MILESTONE
+    a owl:Class ;
+    rdfs:label "MILESTONE" .
+
+<http://usace.gov/qri-dm#MILESTONE/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:MILESTONE ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#MILESTONE/MILESTONE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:MILESTONE ;
+    rdfs:label "MILESTONE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#MILESTONE/MILESTONE_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table MILESTONE" ;
+    rdfs:domain ex:MILESTONE ;
+    rdfs:label "MILESTONE_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:P2_MS_CODE_DESIGN
+    a owl:Class ;
+    rdfs:label "P2_MS_CODE_DESIGN" .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ACTIVITY_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ACTIVITY_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ACTIVITY_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ACTIVITY_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ACTIVITY_WBS_PATH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ACTIVITY_WBS_PATH" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ACTVCODETYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ACTVCODETYPE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ACTV_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ACTV_CODE" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/MILITARY_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "MILITARY_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/MS_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "MS_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/MS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "MS_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/MS_SEQ_NUM>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "MS_SEQ_NUM" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/MS_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "MS_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PARENT_WBS_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PARENT_WBS_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_FOA>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_FOA" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_NO>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_NO" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_OWNING_ORG>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_OWNING_ORG" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_SUBTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_SUBTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/PROJ_TYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "PROJ_TYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/ROW_DEPTH>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "ROW_DEPTH" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_ACT_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_ACT_END_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_ACT_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_ACT_START_DATE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_TARGET_END_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_TARGET_END_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/TASK_TARGET_START_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "TASK_TARGET_START_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/WBS_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "WBS_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#P2_MS_CODE_DESIGN/WBS_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:P2_MS_CODE_DESIGN ;
+    rdfs:label "WBS_NAME" ;
+    rdfs:range xsd:string .
+
+ex:PROGRAM_TYPE
+    a owl:Class ;
+    rdfs:label "PROGRAM_TYPE" .
+
+<http://usace.gov/qri-dm#PROGRAM_TYPE/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROGRAM_TYPE ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROGRAM_TYPE/PROGRAMTYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROGRAM_TYPE ;
+    rdfs:label "PROGRAMTYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROGRAM_TYPE/PROGRAMTYPE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROGRAM_TYPE ;
+    rdfs:label "PROGRAMTYPE_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROGRAM_TYPE/PROGRAM_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table PROGRAM_TYPE" ;
+    rdfs:domain ex:PROGRAM_TYPE ;
+    rdfs:label "PROGRAM_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#PROGRAM_TYPE/PROGRAM_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROGRAM_TYPE ;
+    rdfs:label "PROGRAM_NAME" ;
+    rdfs:range xsd:string .
+
+ex:PROJECT
+    a owl:Class ;
+    rdfs:label "PROJECT" .
+
+<http://usace.gov/qri-dm#PROJECT/CREATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "CREATED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#PROJECT/CREATED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "CREATED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#PROJECT/EDITED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "EDITED_BY" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROJECT/EDITED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "EDITED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#PROJECT/PROGRAM_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "PROGRAM_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#PROJECT/PROJECT_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table PROJECT" ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "PROJECT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#PROJECT/PROJECT_LOCATION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "PROJECT_LOCATION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROJECT/PROJECT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "PROJECT_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#PROJECT/PROJECT_P2>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "PROJECT_P2" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#PROJECT/USACE_ORG>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:PROJECT ;
+    rdfs:label "USACE_ORG" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION
+    a owl:Class ;
+    rdfs:label "QUESTION" .
+
+<http://usace.gov/qri-dm#QUESTION/CREATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "CREATED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION/MITIGATION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "MITIGATION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION/QUESTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "QUESTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION/QUESTION_SHORT>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "QUESTION_SHORT" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION/RESPONSETYPE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "RESPONSETYPE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION/RESPONSE_HELP>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "RESPONSE_HELP" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION/SORT_ORDER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION ;
+    rdfs:label "SORT_ORDER" ;
+    rdfs:range xsd:decimal ;
+    skos:definition "ECB Number, Formal Number for communication" .
+
+ex:QUESTIONNAIRE
+    a owl:Class ;
+    rdfs:label "QUESTIONNAIRE" .
+
+<http://usace.gov/qri-dm#QUESTIONNAIRE/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIRE ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIRE/QUESTIONNAIRE_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table QUESTIONNAIRE" ;
+    rdfs:domain ex:QUESTIONNAIRE ;
+    rdfs:label "QUESTIONNAIRE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIRE/QUESTIONNAIRE_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIRE ;
+    rdfs:label "QUESTIONNAIRE_NAME" ;
+    rdfs:range xsd:string .
+
+ex:QUESTIONNAIREEVENT
+    a owl:Class ;
+    rdfs:label "QUESTIONNAIREEVENT" .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/APPROVED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "APPROVED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/APPROVED_COMMENTS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "APPROVED_COMMENTS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/APPROVED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "APPROVED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/APPROVED_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "APPROVED_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/CREATED_AT>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "CREATED_AT" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/CREATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "CREATED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/LOCKED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "LOCKED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/LOCKED_COMMENTS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "LOCKED_COMMENTS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/LOCKED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "LOCKED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/LOCKED_STATUS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "LOCKED_STATUS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/MILESTONE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "MILESTONE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/QUESTIONNAIREEVENT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "QUESTIONNAIREEVENT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/QUESTIONNAIREEVENT_POC>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "QUESTIONNAIREEVENT_POC" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/QUESTIONNAIRE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "QUESTIONNAIRE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/REVIEW_COMMENTS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "REVIEW_COMMENTS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/SUBPROJECT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "SUBPROJECT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTIONNAIREEVENT/SUBPROJECT_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:QUESTIONNAIREEVENT ;
+    rdfs:label "QUESTIONNAIREEVENT.SUBPROJECT_ID → SUBPROJECT" ;
+    rdfs:range ex:SUBPROJECT .
+
+ex:QUESTION_COUNT
+    a owl:Class ;
+    rdfs:label "QUESTION_COUNT" .
+
+<http://usace.gov/qri-dm#QUESTION_COUNT/MILESTONE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_COUNT ;
+    rdfs:label "MILESTONE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_COUNT/PROGRAMTYPE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_COUNT ;
+    rdfs:label "PROGRAMTYPE_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#QUESTION_COUNT/QUESTIONNAIRE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_COUNT ;
+    rdfs:label "QUESTIONNAIRE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_COUNT/QUESTION_COUNT>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_COUNT ;
+    rdfs:label "QUESTION_COUNT" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION_INDICATOR_REL
+    a owl:Class ;
+    rdfs:label "QUESTION_INDICATOR_REL" .
+
+<http://usace.gov/qri-dm#QUESTION_INDICATOR_REL/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table QUESTION_INDICATOR_REL" ;
+    rdfs:domain ex:QUESTION_INDICATOR_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_INDICATOR_REL/INDICATOR_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_INDICATOR_REL ;
+    rdfs:label "INDICATOR_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_INDICATOR_REL/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_INDICATOR_REL ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION_MILESTONE_REL
+    a owl:Class ;
+    rdfs:label "QUESTION_MILESTONE_REL" .
+
+<http://usace.gov/qri-dm#QUESTION_MILESTONE_REL/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table QUESTION_MILESTONE_REL" ;
+    rdfs:domain ex:QUESTION_MILESTONE_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_MILESTONE_REL/MILESTONE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_MILESTONE_REL ;
+    rdfs:label "MILESTONE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_MILESTONE_REL/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_MILESTONE_REL ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION_PROGTYPE_REL
+    a owl:Class ;
+    rdfs:label "QUESTION_PROGTYPE_REL" .
+
+<http://usace.gov/qri-dm#QUESTION_PROGTYPE_REL/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table QUESTION_PROGTYPE_REL" ;
+    rdfs:domain ex:QUESTION_PROGTYPE_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_PROGTYPE_REL/PROGRAMTYPE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_PROGTYPE_REL ;
+    rdfs:label "PROGRAMTYPE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_PROGTYPE_REL/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_PROGTYPE_REL ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION_QUESTIONNAIRE_REL
+    a owl:Class ;
+    rdfs:label "QUESTION_QUESTIONNAIRE_REL" .
+
+<http://usace.gov/qri-dm#QUESTION_QUESTIONNAIRE_REL/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_QUESTIONNAIRE_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_QUESTIONNAIRE_REL/QUESTIONNAIRE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_QUESTIONNAIRE_REL ;
+    rdfs:label "QUESTIONNAIRE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_QUESTIONNAIRE_REL/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_QUESTIONNAIRE_REL ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:QUESTION_REFERENCE_REL
+    a owl:Class ;
+    rdfs:label "QUESTION_REFERENCE_REL" .
+
+<http://usace.gov/qri-dm#QUESTION_REFERENCE_REL/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_REFERENCE_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_REFERENCE_REL/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_REFERENCE_REL ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#QUESTION_REFERENCE_REL/REFERENCE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:QUESTION_REFERENCE_REL ;
+    rdfs:label "REFERENCE_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:REFERENCE
+    a owl:Class ;
+    rdfs:label "REFERENCE" .
+
+<http://usace.gov/qri-dm#REFERENCE/ADD_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "ADD_ID" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#REFERENCE/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#REFERENCE/HYPERLINK>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "HYPERLINK" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#REFERENCE/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#REFERENCE/PUB_NUMBER>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "PUB_NUMBER" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#REFERENCE/TITLE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:REFERENCE ;
+    rdfs:label "TITLE" ;
+    rdfs:range xsd:string .
+
+ex:RESPONSES
+    a owl:Class ;
+    rdfs:label "RESPONSES" .
+
+<http://usace.gov/qri-dm#RESPONSES/CREATED_AT>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "CREATED_AT" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#RESPONSES/CREATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "CREATED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSES/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSES/QUESTIONNAIREEVENT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "QUESTIONNAIREEVENT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSES/QUESTIONNAIREEVENT_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "RESPONSES.QUESTIONNAIREEVENT_ID → QUESTIONNAIREEVENT" ;
+    rdfs:range ex:QUESTIONNAIREEVENT .
+
+<http://usace.gov/qri-dm#RESPONSES/QUESTION_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "QUESTION_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSES/RESPONSE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSES ;
+    rdfs:label "RESPONSE_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:RESPONSETYPE
+    a owl:Class ;
+    rdfs:label "RESPONSETYPE" .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table RESPONSETYPE" ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSEDESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSEDESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSEORDER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSEORDER" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSETYPE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSETYPE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSETYPE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSETYPE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#RESPONSETYPE/RESPONSEVALUE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:RESPONSETYPE ;
+    rdfs:label "RESPONSEVALUE" ;
+    rdfs:range xsd:decimal .
+
+ex:ROLES
+    a owl:Class ;
+    rdfs:label "ROLES" .
+
+<http://usace.gov/qri-dm#ROLES/ADMIN_PERMISSIONS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "ADMIN_PERMISSIONS" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#ROLES/DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#ROLES/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table ROLES" ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#ROLES/ROLE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "ROLE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#ROLES/SORT_ORDER>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "SORT_ORDER" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#ROLES/SUB_PROJECT_PERMISSIONS>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:ROLES ;
+    rdfs:label "SUB_PROJECT_PERMISSIONS" ;
+    rdfs:range xsd:string .
+
+ex:SUBPROJECT
+    a owl:Class ;
+    rdfs:label "SUBPROJECT" .
+
+<http://usace.gov/qri-dm#SUBPROJECT/CREATED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "CREATED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/CREATED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "CREATED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#SUBPROJECT/DESIGNTEAM_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "DESIGNTEAM_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/DESIGN_STRATEGY_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "DESIGN_STRATEGY_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/EDITED_BY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "EDITED_BY" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/EDITED_DATE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "EDITED_DATE" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#SUBPROJECT/PROJECT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "PROJECT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/PROJECT_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "SUBPROJECT.PROJECT_ID → PROJECT" ;
+    rdfs:range ex:PROJECT .
+
+<http://usace.gov/qri-dm#SUBPROJECT/SUBPROJECT_DESCRIPTION>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "SUBPROJECT_DESCRIPTION" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#SUBPROJECT/SUBPROJECT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "SUBPROJECT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT/SUBPROJECT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:SUBPROJECT ;
+    rdfs:label "SUBPROJECT_NAME" ;
+    rdfs:range xsd:string .
+
+ex:SUBPROJECT_ROLES
+    a owl:Class ;
+    rdfs:label "SUBPROJECT_ROLES" .
+
+<http://usace.gov/qri-dm#SUBPROJECT_ROLES/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT_ROLES ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT_ROLES/ROLE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT_ROLES ;
+    rdfs:label "ROLE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT_ROLES/SUBPROJECT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT_ROLES ;
+    rdfs:label "SUBPROJECT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#SUBPROJECT_ROLES/SUBPROJECT_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:SUBPROJECT_ROLES ;
+    rdfs:label "SUBPROJECT_ROLES.SUBPROJECT_ID → SUBPROJECT" ;
+    rdfs:range ex:SUBPROJECT .
+
+<http://usace.gov/qri-dm#SUBPROJECT_ROLES/USER_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:SUBPROJECT_ROLES ;
+    rdfs:label "USER_ID" ;
+    rdfs:range xsd:decimal .
+
+ex:UI_APEX_CARDS
+    a owl:Class ;
+    rdfs:label "UI_APEX_CARDS" .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_BADGE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_BADGE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_BODY>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_BODY" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_ICON>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_ICON" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_IMAGE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_IMAGE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_SUBTITLE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_SUBTITLE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/CARD_TITLE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "CARD_TITLE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#UI_APEX_CARDS/ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:UI_APEX_CARDS ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+ex:USACE_ORGS
+    a owl:Class ;
+    rdfs:label "USACE_ORGS" .
+
+<http://usace.gov/qri-dm#USACE_ORGS/DISTRICT_CODE>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "DISTRICT_CODE" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USACE_ORGS/DISTRICT_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table USACE_ORGS" ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "DISTRICT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USACE_ORGS/DISTRICT_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "DISTRICT_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USACE_ORGS/EROC>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "EROC" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USACE_ORGS/MSC>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "MSC" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USACE_ORGS/MSC_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "MSC_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USACE_ORGS/SME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USACE_ORGS ;
+    rdfs:label "SME" ;
+    rdfs:range xsd:string .
+
+ex:USERS
+    a owl:Class ;
+    rdfs:label "USERS" .
+
+<http://usace.gov/qri-dm#USERS/CAC_STRING>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "CAC_STRING" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USERS/CREATED>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "CREATED" ;
+    rdfs:range xsd:dateTime .
+
+<http://usace.gov/qri-dm#USERS/DISTRICT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "DISTRICT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USERS/DOD_ID>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "DOD_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USERS/EMAIL>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "EMAIL" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USERS/FIRST_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "FIRST_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USERS/LAST_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "LAST_NAME" ;
+    rdfs:range xsd:string .
+
+<http://usace.gov/qri-dm#USERS/USER_ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table USERS" ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "USER_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USERS/USER_NAME>
+    a owl:DatatypeProperty ;
+    rdfs:domain ex:USERS ;
+    rdfs:label "USER_NAME" ;
+    rdfs:range xsd:string .
+
+ex:USER_ORG_REL
+    a owl:Class ;
+    rdfs:label "USER_ORG_REL" .
+
+<http://usace.gov/qri-dm#USER_ORG_REL/DISTRICT_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:USER_ORG_REL ;
+    rdfs:label "DISTRICT_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ORG_REL/DISTRICT_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:USER_ORG_REL ;
+    rdfs:label "USER_ORG_REL.DISTRICT_ID → USACE_ORGS" ;
+    rdfs:range ex:USACE_ORGS .
+
+<http://usace.gov/qri-dm#USER_ORG_REL/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table USER_ORG_REL" ;
+    rdfs:domain ex:USER_ORG_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ORG_REL/USER_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:USER_ORG_REL ;
+    rdfs:label "USER_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ORG_REL/USER_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:USER_ORG_REL ;
+    rdfs:label "USER_ORG_REL.USER_ID → USERS" ;
+    rdfs:range ex:USERS .
+
+ex:USER_ROLE_REL
+    a owl:Class ;
+    rdfs:label "USER_ROLE_REL" .
+
+<http://usace.gov/qri-dm#USER_ROLE_REL/ID>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment "NOT NULL column", "Primary key for table USER_ROLE_REL" ;
+    rdfs:domain ex:USER_ROLE_REL ;
+    rdfs:label "ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ROLE_REL/ROLE_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:USER_ROLE_REL ;
+    rdfs:label "ROLE_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ROLE_REL/ROLE_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:USER_ROLE_REL ;
+    rdfs:label "USER_ROLE_REL.ROLE_ID → ROLES" ;
+    rdfs:range ex:ROLES .
+
+<http://usace.gov/qri-dm#USER_ROLE_REL/USER_ID>
+    a owl:DatatypeProperty ;
+    rdfs:comment "NOT NULL column" ;
+    rdfs:domain ex:USER_ROLE_REL ;
+    rdfs:label "USER_ID" ;
+    rdfs:range xsd:decimal .
+
+<http://usace.gov/qri-dm#USER_ROLE_REL/USER_ID_ref>
+    a owl:ObjectProperty ;
+    rdfs:domain ex:USER_ROLE_REL ;
+    rdfs:label "USER_ROLE_REL.USER_ID → USERS" ;
+    rdfs:range ex:USERS .
+

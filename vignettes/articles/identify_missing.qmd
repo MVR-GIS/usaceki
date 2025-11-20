@@ -16,7 +16,7 @@ library(rdflib)
 ```
 
 ## EQRI
-The USACE Engineering Quality Risk Indicator (EQRI) application allows staff to record and track engineering quality indicators for reporting and analysis. 
+The USACE Engineering Quality Risk Indicator (EQRI) application allows staff to record and track engineering quality indicators for reporting and analysis. For more details see: [](https://usace.dps.mil/sites/KMP-EC/SitePages/QRI.aspx)
 
 ## Extract RDMS Schema Metadata
 
@@ -80,19 +80,26 @@ rdf_graph <- map_fks_to_rdf(
 )
 ```
 
+
 ## Serialize to Turtle
 ```{r}
 # Write TTL with prefixes (the `namespace` parameter binds prefixes in the output)
 rdflib::rdf_serialize(
   rdf_graph,
-  "inst/extdata/qri-dm.ttl",
+  "example-qri-dm.ttl",
   format = "turtle",
   namespace = ns
 )
 ```
 
-## Vizualize Schema Metadata
 
+## Query the RDF Triplestore
+```{r}
+qri_triplestore_df <- get_triples_df(rdf_graph)
+```
+
+
+## Vizualize Schema Metadata
 ```{r}
 
 ```
