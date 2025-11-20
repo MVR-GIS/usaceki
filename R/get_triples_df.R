@@ -16,7 +16,7 @@ get_triples_df <- function(graph) {
   # Execute the query and get results as a data frame
   df <- rdflib::rdf_query(graph, SPARQL_query)
 
-  # Rename fields for interpretability
+  # Rename fields for interpretability and sort
   triples_df <- df %>%
     rename(from = subject) %>%
     rename(to = object) %>%
