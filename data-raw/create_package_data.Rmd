@@ -87,10 +87,3 @@ rdflib::rdf_serialize(
 )
 ```
 
-
-## Save package data
-```{r}
-qri_rdf_graph <- rdf_graph
-usethis::use_data(qri_rdf_graph, overwrite = TRUE)
-```
-
