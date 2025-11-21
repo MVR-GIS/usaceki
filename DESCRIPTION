@@ -21,7 +21,8 @@ Imports:
     rdflib,
     rlang,
     ROracle,
-    stringr
+    stringr,
+    tibble
 Suggests: 
     knitr,
     rmarkdown,
